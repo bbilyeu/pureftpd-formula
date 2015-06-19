@@ -1,0 +1,13 @@
+# vim: sts=2 ts=2 sw=2 et ai
+pureftpd:
+  lookup:
+    pkg: "pure-ftpd" #default pure-ftpd for Ubuntu
+  config:
+    AltLog: "clf:/var/log/pure-ftpd/transfer.log"
+    ChrootEveryone: "yes"
+    FSCharset: "UTF-8"
+    MinUID: "1000"
+    NoAnonymous: "yes"
+    PAMAuthentication: "no"
+    PureDB: "/etc/pure-ftpd/pureftpd.pdb"
+    UnixAuthentication: "yes"
