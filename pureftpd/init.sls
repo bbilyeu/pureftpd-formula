@@ -2,8 +2,8 @@
 
 pureftpd_install:
   pkg.installed:
-    - name: {{ pureftpd.lookup.pkg }}
+    - name: {{ pureftpd.pkg }}
   service.running:
-    - name: {{ pureftpd.lookup.service }}
+    - name: {{ pureftpd.service }}
     - enable: True
     - reload: True
