@@ -1,3 +1,4 @@
+# vim: sts=2 ts=2 sw=2 et ai
 {% from "pureftpd/map.jinja" import pureftpd with context %}
 
 include:
@@ -10,6 +11,6 @@ pureftpd_config_{{value}}:
     - source: salt://pureftpd/templates/tmp.tmpl
     - template: jinja
     - context:
-	- data: {{items}}
+	data: {{items}}
 {% endfor %}
 
