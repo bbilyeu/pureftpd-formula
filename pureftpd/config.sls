@@ -11,6 +11,6 @@ pureftpd_config_{{value}}:
     - source: salt://pureftpd/templates/tmp.tmpl
     - template: jinja
     - context:
-	data: {{items}}
+	      data: {{items}}
 {% endfor %}
 
