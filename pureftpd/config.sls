@@ -3,7 +3,7 @@
 include:
   - pureftpd
 
-{% for value, items in salt['pillar.get']('pureftpd:config', {}) %}
+{% for value, items in salt['pillar.get']('pureftpd:config', {}).iteritems() %}
 pureftpd_config_{{value}}:
   file.managed:
     - name: {{ value }}
