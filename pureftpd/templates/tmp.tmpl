@@ -1,1 +1,3 @@
-{{data}}
+{% for value, items in salt['pillar.get']('pureftpd:config', {}).iteritems() %}
+{{value}} {{items}}
+{% endfor %}

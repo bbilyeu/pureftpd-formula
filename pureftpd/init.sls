@@ -8,12 +8,9 @@ pureftpd_install:
     - enable: True
     - reload: True
 
-{% for value, items in salt['pillar.get']('pureftpd:config', {}).iteritems() %}
-pureftpd_config_{{value}}:
+pureftpd_config:
   file.managed:
   - name: /etc/pure-ftpd/pure-ftpd.conf
   - source: salt://pureftpd/templates/tmp.tmpl
   - template: jinja
-  - context:
-      data: "{{value}} {{items}}"
 {% endfor %}
