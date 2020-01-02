@@ -13,4 +13,3 @@ pureftpd_config:
   - name: /etc/pure-ftpd/pure-ftpd.conf
   - source: salt://pureftpd/templates/tmp.tmpl
   - template: jinja
-{% endfor %}
